@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkHub — Muhammadaziz | UI/UX Designer & Digital Creator</title>
+    <meta name="description" content="Designing brands and digital experiences that make an impact. All important links in one place.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Inline theme initialization to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Ambient decorative blobs -->
+        <div class="blob blob--left"></div>
+        <div class="blob blob--right"></div>
+
+        <main class="container" id="app">
+            <!-- Content rendered by JS -->
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
